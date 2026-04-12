@@ -8,11 +8,12 @@ from datetime import datetime
 # User menu
 def user_menu():
     ascii_banner = pyfiglet.figlet_format("What The Header!")
-    print("=" * 50)
+    print("-" * 60)
     print(ascii_banner)
-    print("=" * 50)
-    print("| Enter a valid URL and find out WTH |")
-    print("=" * 50)
+    print("-" * 60)
+    print(str(datetime.now()))
+    print("| Enter a valid URL [https://example.com] and find out WTH |")
+    print("-" * 50)
 
     # Get user input
     URL = input("URL: ")
@@ -45,9 +46,13 @@ def make_request(URL):
 
 def get_headers(responseBody):
     # Print Out the Headers
-    print("======================================\n|               Headers              |\n======================================")
+    print("-" * 15)
+    print("|" * 1, "Headers", "|" * 1)
+    print("-" * 15)
     for headers in responseBody.headers:
-        print(headers)
+        print(f"|{headers}", " " * (len(headers) - 50), "|" * 1)
+
+    print("-" * 15)
 
 
 def is_valid_url(URL):
