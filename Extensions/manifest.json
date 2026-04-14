@@ -1,6 +1,6 @@
 {
-    "name":"Hello Extensions",
-    "description":"Base Level EXtension",
+    "name":"WTH - What the header",
+    "description":"An Requeste and Response header enumrate",
     "version":"1.0",
     "manifest_version":3,
     "action":{
@@ -8,3 +8,4 @@
         "default_icon":"hello_extensions.png"
     }
 }
+
